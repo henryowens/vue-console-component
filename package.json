@@ -1,7 +1,7 @@
 {
   "name": "vue-console-component",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -27,5 +27,17 @@
     "eslint-plugin-vue": "^7.0.0",
     "prettier": "^2.2.1",
     "typescript": "~4.1.5"
-  }
+  },
+  "description": "## Project setup ``` yarn install ```",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henryowens/vue-console-component.git"
+  },
+  "author": "Henry Owens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henryowens/vue-console-component/issues"
+  },
+  "homepage": "https://github.com/henryowens/vue-console-component#readme"
 }
