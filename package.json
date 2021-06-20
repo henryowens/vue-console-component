@@ -1,6 +1,6 @@
 {
   "name": "vue-console-component",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": false,
   "types": "types/index.d.ts",
   "files": [
@@ -11,7 +11,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:types": "tsc --build typesconfig.json",
-    "build": "vue-cli-service build --target lib --name vue-console-component",
+    "build": "vue-cli-service build --target lib --name vue-console-component && npm run build:types",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
