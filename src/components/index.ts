@@ -1,3 +1,3 @@
-import Console from "./console/Console.vue";
+import ConsoleItem from "./console-item";
 
-export { Console };
+export { ConsoleItem };
