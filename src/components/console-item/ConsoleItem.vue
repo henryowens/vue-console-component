@@ -1,9 +1,6 @@
 <template>
   <p :class="consoleItemStyle">
-    {{ scrollHeight }}
-    <span ref="preText" class="pre-text" v-if="preText"
-      >{{ preText }}: {{ refs }}</span
-    >
+    <span class="pre-text" v-if="preText">{{ preText }}: </span>
     <span v-if="!canEdit" class="body-text">
       <slot />
     </span>

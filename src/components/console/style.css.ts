@@ -29,16 +29,40 @@ export const buttonsStyle: string = style({
 });
 
 export const bodyStyle: string = style({
-  height: px(459),
   background: "#000",
   fontFamily: "Source Code Pro,monospace!important",
   color: "#d0cfcf!important",
   padding: px(10),
+  overflowY: "hidden",
+});
+
+export const scrollStyle: string = style({
+  height: percent(100),
+  overflowY: "scroll",
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-end",
-  overflowY: "hidden",
+  $nest: {
+    "&::-webkit-scrollbar": {
+      background: "transparent",
+      width: px(5),
+    },
+    "&::-webkit-scrollbar-thumb": {
+      background: "#2b2b2b",
+      borderRadius: px(10),
+    },
+    span: {
+      maxHeight: percent(100),
+    },
+  },
 });
+
 export function consoleStyle(width: string, height: string): string {
-  return style({ width, height });
+  return style({
+    width,
+    height,
+    maxWidth: percent(100),
+    display: "grid",
+    gridTemplateRows: "auto 1fr",
+  });
 }

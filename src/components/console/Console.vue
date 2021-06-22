@@ -8,10 +8,17 @@
       </div>
     </div>
     <div :class="bodyStyle">
-      <console-item v-for="(msg, i) in messages" :key="i" :pre-text="preText">{{
-        msg
-      }}</console-item>
-      <console-item @enter="enter" :pre-text="preText" :can-edit="true" />
+      <div :class="scrollStyle">
+        <span>
+          <console-item
+            v-for="(msg, i) in messages"
+            :key="i"
+            :pre-text="preText"
+            >{{ msg }}</console-item
+          >
+          <console-item @enter="enter" :pre-text="preText" :can-edit="true" />
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +31,7 @@ import {
   topBarStyle,
   buttonsStyle,
   bodyStyle,
+  scrollStyle,
 } from "./style.css";
 
 class Props {
@@ -32,11 +40,11 @@ class Props {
   });
   width: WithDefault<string> = prop<string>({
     required: false,
-    default: "50%",
+    default: "700px",
   });
-  hight: WithDefault<string> = prop<string>({
+  height: WithDefault<string> = prop<string>({
     required: false,
-    default: "500px",
+    default: "400px",
   });
 }
 
@@ -49,11 +57,12 @@ export default class Console extends Vue.with(Props) {
   public topBarStyle: string = topBarStyle;
   public buttonsStyle: string = buttonsStyle;
   public bodyStyle: string = bodyStyle;
+  public scrollStyle: string = scrollStyle;
 
   public messages: string[] = [];
 
   get consoleStyle(): string {
-    return consoleStyle(this.width, this.hight);
+    return consoleStyle(this.width, this.height);
   }
 
   public enter(message: string): void {
