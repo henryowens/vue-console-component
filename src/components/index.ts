@@ -1,3 +1,3 @@
-import ConsoleItem from "./console-item";
+import Console from "./console";
 
-export { ConsoleItem };
+export { Console };

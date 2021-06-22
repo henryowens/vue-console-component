@@ -4,6 +4,4 @@ declare const vueConsoleComponent: Exclude<Plugin["install"], undefined>;
 
 export default vueConsoleComponent;
 
-export const ConsoleItem:
-  | Exclude<Plugin["install"], undefined>
-  | DefineComponent;
+export const Console: Exclude<Plugin["install"], undefined> | DefineComponent;
