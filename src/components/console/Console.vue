@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { Options, prop, Vue, WithDefault } from "vue-class-component";
-import { ConsoleItem } from "../index";
+import { ConsoleItem } from "../console-item";
 import {
   consoleStyle,
   topBarStyle,
