@@ -12,7 +12,9 @@
     "serve": "vue-cli-service serve",
     "build:types": "tsc --build typesconfig.json",
     "build": "vue-cli-service build --target lib --name vue-console-component --types types/index.d.ts",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docs:dev": "cd ./docs && npm run dev",
+    "docs:build": "cd ./docs && npm run build"
   },
   "dependencies": {
     "core-js": "^3.6.5",

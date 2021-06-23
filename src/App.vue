@@ -5,7 +5,10 @@
 </template>
 
 <script>
+import {} from "vue-conz"
 export default {
+  props: {
+  },
   name: "App",
 };
 </script>

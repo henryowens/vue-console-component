@@ -67,6 +67,7 @@ export default class Console extends Vue.with(Props) {
 
   public enter(message: string): void {
     this.messages.push(message);
+    this.$emit("input-console", message);
   }
 }
 </script>
