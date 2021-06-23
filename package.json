@@ -13,6 +13,7 @@
     "build:types": "tsc --build typesconfig.json",
     "build": "vue-cli-service build --target lib --name vue-console-component --types types/index.d.ts",
     "lint": "vue-cli-service lint",
+    "docs:setup": "cd ./docs && npm i",
     "docs:dev": "cd ./docs && npm run dev"
   },
   "dependencies": {
